@@ -11,9 +11,10 @@ instancias = []
 with open("usuarios.txt") as usuarios:
     linea = usuarios.readline()
     while linea:
+        print(linea)
         usuario = json.loads(linea)
         instancias.append(Usuario(usuario.get("nombre"), usuario.get("apellido"), usuario.get("email"), usuario.get("genero")))
         linea = usuarios.readline()
-        print(linea)
+        
 
 
